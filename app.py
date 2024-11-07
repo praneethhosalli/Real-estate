@@ -76,7 +76,7 @@ if st.button("Predict"):
         prediction = model.predict(features)
 
         # Multiply by 1000 to get the predicted price in actual dollars
-        predicted_price_in_dollars = prediction[0] * 10000
+        predicted_price_in_dollars = prediction[0] * 25000
 
         # Add conditional statements to adjust the prediction
         adjusted_price = predicted_price_in_dollars
@@ -184,7 +184,7 @@ if st.button("Predict"):
             adjusted_price *= 0.8  # Decrease by 20%
 
         # Display the final adjusted price
-        st.markdown(f'<div class="prediction-result">Adjusted Predicted Price: ${adjusted_price:,.2f}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="prediction-result">Predicted Price: ${adjusted_price:,.2f}</div>', unsafe_allow_html=True)
 
     except Exception as e:
         st.markdown(f'<div class="error-message">Error: {str(e)}</div>', unsafe_allow_html=True)
