@@ -52,7 +52,7 @@ st.markdown('<div class="description">Enter the feature values to predict the pr
 crim = st.number_input("CRIM - per capita crime rate by town", value=0.0, key="crim")
 zn = st.number_input("ZN - proportion of residential land zoned for lots over 25,000 sq.ft.", value=0.0, key="zn")
 indus = st.number_input("INDUS - proportion of non-retail business acres per town", value=0.0, key="indus")
-chas = st.number_input("CHAS - Charles River dummy variable", value=0.0, key="chas")
+chas = st.number_input("CHAS - Charles River  variable", value=0.0, key="chas")
 nox = st.number_input("NOX - nitric oxides concentration (parts per 10 million)", value=0.0, key="nox")
 rm = st.number_input("RM - average number of rooms per dwelling", value=0.0, key="rm")
 age = st.number_input("AGE - proportion of owner-occupied units built prior to 1940", value=0.0, key="age")
@@ -60,7 +60,7 @@ dis = st.number_input("DIS - weighted distances to five Boston employment centre
 rad = st.number_input("RAD - index of accessibility to radial highways", value=0.0, key="rad")
 tax = st.number_input("TAX - full-value property-tax rate per $10,000", value=0.0, key="tax")
 ptratio = st.number_input("PTRATIO - pupil-teacher ratio by town", value=0.0, key="ptratio")
-b = st.number_input("B - 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town", value=0.0, key="b")
+b = st.number_input("B  is the proportion of blacks by town", value=0.0, key="b")
 lstat = st.number_input("LSTAT - % lower status of the population", value=0.0, key="lstat")
 
 # Adding a separator between input and prediction button
@@ -76,7 +76,7 @@ if st.button("Predict"):
         prediction = model.predict(features)
 
         # Multiply by 1000 to get the predicted price in actual dollars
-        predicted_price_in_dollars = prediction[0] * 25000
+        predicted_price_in_dollars = prediction[0] * 10000
 
         # Add conditional statements to adjust the prediction
         adjusted_price = predicted_price_in_dollars
